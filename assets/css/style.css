@@ -1,0 +1,22 @@
+.content{
+    margin-top: 60px;
+}
+.card{
+    min-height: 340px !important;
+}
+.comment{
+    background-color: rgb(247, 247, 247);
+    border-left: 4px solid rgb(10, 55, 216);
+}
+#top-btn{
+    display: none;
+    border-radius: 50% !important;
+    height: 50px !important;
+    width: 50px !important;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    margin: 10px;
+    cursor: pointer;
+}
