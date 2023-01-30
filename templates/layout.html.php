@@ -33,10 +33,12 @@
                 </div>
             </nav>
         </div>
-        <div class="container content">
+    </div>
+    <div class="container-fluid content">
+        <div class="container">
             <?= $pageContent ?>
         </div>
-        <div class="bg-dark p-2">
+        <div class="bg-dark p-2 rounded">
             <p class="text-center text-white">&target; Created by Amounan Honoré - amounahonore@gmail.com &target; </p>
         </div>
     </div>

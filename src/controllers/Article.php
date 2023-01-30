@@ -47,7 +47,6 @@ class Article extends Controller
 
     public function delete()
     {
-
         if (empty($_GET['id']) || !ctype_digit($_GET['id'])) {
             die("Ho ?! Tu n'as pas précisé l'id de l'article !");
         }

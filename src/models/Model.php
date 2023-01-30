@@ -18,7 +18,7 @@ abstract class Model {
         return $query->fetch();
     }
 
-    public function delete(int $id): void
+    public function delete(int $id)
     {
         $query = $this->pdo->prepare("DELETE FROM {$this->table} WHERE id = :id");
         $query->execute(['id' => $id]);

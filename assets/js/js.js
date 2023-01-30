@@ -31,4 +31,35 @@ $(document).ready(function () {
         document.documentElement.scrollTop = 0;//pour chrome, opera mini and other
     }
 
+    //supprimer par ajax les articles
+    $(".delete-article").click(function (e) { 
+        e.preventDefault();
+        let lien = $(this).attr('href');
+
+        if (confirm('Voulez-vous vraiment supprimer ?')) {
+            fetch(lien)
+            .then(response => response.text())
+            .then(data => {
+                const contenu = $('.content');
+                contenu.replaceWith(data);
+            })
+            .catch(error=>alert("Une erreur s'est produite!"+error.message))
+        }
+        
+    });
+
+    //supprimer par ajax les commentaires
+    $('.delete-comment').click(function (e) {
+        e.preventDefault();
+        let lien = $(this).attr('href');
+
+        if (confirm('Voulez-vous vraiment supprimer le commentaire ?')) {
+            fetch(lien)
+            .then(response => response.text())
+            .then(data => {
+                const contenu = $('.content');
+                contenu.replaceWith(data);
+            })
+        }
+    });
 });

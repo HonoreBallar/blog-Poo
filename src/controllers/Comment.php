@@ -14,7 +14,6 @@ class Comment extends Controller
         if (!empty($_POST['author'])) {
             $author = $_POST['author'];
         }
-
         // Ensuite le contenu
         $content = null;
         if (!empty($_POST['content'])) {
@@ -28,19 +27,15 @@ class Comment extends Controller
             $article_id = $_POST['article_id'];
         }
 
-        // Vérification finale des infos envoyées dans le formulaire (donc dans le POST)
-        // Si il n'y a pas d'auteur OU qu'il n'y a pas de contenu OU qu'il n'y a pas d'identifiant d'article
         if (!$author || !$article_id || !$content) {
             die("Votre formulaire a été mal rempli !");
         }
 
         $article = $articleModel->find($article_id);
-        // Si rien n'est revenu, on fait une erreur
         if (!$article) {
             die("Ho ! L'article $article_id n'existe pas boloss !");
         }
 
-        // 3. Insertion du commentaire
         $this->model->add(compact('author', 'content', 'article_id'));
 
         // 4. Redirection vers l'article en question :

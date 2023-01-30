@@ -14,6 +14,7 @@ class Renderer
         $pageContent = ob_get_clean();
 
         require('templates/layout.html.php');
+
     }
 
 }
