@@ -4,7 +4,7 @@ namespace Controllers;
 
 class Article extends Controller
 {
-   protected $modelName = \Models\Article::class; //ou "\Models\Article"
+   protected $modelName = \Models\Article::class;
 
     public function index()
     {
