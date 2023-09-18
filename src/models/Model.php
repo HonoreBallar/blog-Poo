@@ -32,6 +32,7 @@ abstract class Model {
             $sql .=" ORDER BY $order";
         }
         $resultats = $this->pdo->query($sql);
+        
         // On fouille le résultat pour en extraire les données réelles
         return $resultats->fetchAll();
     }
