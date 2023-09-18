@@ -2,16 +2,20 @@ body{
     margin: 0;
     padding: 0;
 }
+
 .content{
     margin-top: 60px;
 }
+
 .card{
     min-height: 340px !important;
 }
+
 .comment{
     background-color: rgb(247, 247, 247);
     border-left: 4px solid rgb(10, 55, 216);
 }
+
 #top-btn{
     display: none;
     border-radius: 50% !important;
